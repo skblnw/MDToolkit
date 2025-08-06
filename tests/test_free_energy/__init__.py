@@ -1,0 +1,1 @@
+"""Free energy analysis test module."""
