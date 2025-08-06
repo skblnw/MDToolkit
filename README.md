@@ -3,12 +3,12 @@
 [![Python](https://img.shields.io/badge/python-3.8%2B-blue)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![MDAnalysis](https://img.shields.io/badge/MDAnalysis-2.0%2B-orange)](https://www.mdanalysis.org/)
-[![Documentation](https://img.shields.io/badge/docs-available-brightgreen)](https://github.com/yourusername/MDToolkit/wiki)
+[![Documentation](https://img.shields.io/badge/docs-available-brightgreen)](https://github.com/skblnw/MDToolkit/wiki)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 **MDToolkit** is a comprehensive, integrated molecular dynamics analysis framework that unifies structural analysis, correlation dynamics, and publication-ready visualization into a single cohesive pipeline.
 
-## 🌟 Key Features
+## Key Features
 
 ### Unified Analysis Pipeline
 - **No more tool jumping** - Single Python framework eliminates switching between VMD, MATLAB, and disparate scripts
@@ -27,12 +27,12 @@
 - **Scalable** - Handles large trajectories with chunking
 - **Configurable** - YAML-based configuration for reproducibility
 
-## 📦 Installation
+## Installation
 
 ### Quick Install
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/MDToolkit.git
+git clone https://github.com/skblnw/MDToolkit.git
 cd MDToolkit
 
 # Create conda environment
@@ -68,7 +68,7 @@ pip install nglview>=3.0
 pip install pytest black flake8 jupyter
 ```
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Basic Usage
 ```python
@@ -109,7 +109,7 @@ results = pipeline.run_all_analyses()
 pipeline.generate_report("analysis_report.html")
 ```
 
-## 📊 Example Analyses
+## Example Analyses
 
 ### 1. Integrated Structure-Dynamics Analysis
 ```python
@@ -155,7 +155,7 @@ sklearn_results = pca.run_sklearn_pca()
 validation = pca.validate_pca()  # Ensures consistency
 ```
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```
 MDToolkit/
@@ -175,7 +175,7 @@ MDToolkit/
 └── legacy/              # VMD/MATLAB scripts for reference
 ```
 
-## 📚 Documentation
+## Documentation
 
 ### Notebooks
 Interactive Jupyter notebooks demonstrate complete workflows:
@@ -188,7 +188,7 @@ Interactive Jupyter notebooks demonstrate complete workflows:
 ### API Reference
 Comprehensive API documentation is available in the [docs](docs/) directory and online at [Read the Docs](https://mdtoolkit.readthedocs.io/).
 
-## 🔄 Migration Guide
+## Migration Guide
 
 ### From Scattered Scripts
 ```python
@@ -212,7 +212,7 @@ hbonds = HydrogenBonds(traj)
 results = hbonds.run()
 ```
 
-## 🧪 Testing
+## Testing
 
 ```bash
 # Run all tests
@@ -225,7 +225,7 @@ pytest --cov=mdtoolkit
 pytest tests/test_structure.py
 ```
 
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
 
@@ -235,25 +235,25 @@ We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📝 Citation
+## Citation
 
 If you use MDToolkit in your research, please cite:
 
 ```bibtex
 @software{mdtoolkit2024,
   title = {MDToolkit: Integrated Molecular Dynamics Analysis Framework},
-  author = {Your Name},
+  author = {skblnw},
   year = {2024},
-  url = {https://github.com/yourusername/MDToolkit},
+  url = {https://github.com/skblnw/MDToolkit},
   doi = {10.5281/zenodo.XXXXXXX}
 }
 ```
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 MDToolkit integrates and builds upon these excellent projects:
 - [MDAnalysis](https://www.mdanalysis.org/) - Core trajectory analysis
@@ -261,14 +261,14 @@ MDToolkit integrates and builds upon these excellent projects:
 - [scikit-learn](https://scikit-learn.org/) - Machine learning validation
 - [matplotlib](https://matplotlib.org/) & [seaborn](https://seaborn.pydata.org/) - Visualization
 
-## 💬 Support
+## Support
 
-- **Issues**: [GitHub Issues](https://github.com/yourusername/MDToolkit/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/yourusername/MDToolkit/discussions)
-- **Documentation**: [Wiki](https://github.com/yourusername/MDToolkit/wiki)
-- **Email**: mdtoolkit@yourdomain.com
+- **Issues**: [GitHub Issues](https://github.com/skblnw/MDToolkit/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/skblnw/MDToolkit/discussions)
+- **Documentation**: [Wiki](https://github.com/skblnw/MDToolkit/wiki)
+- **Email**: contact@skblnw.dev
 
-## 🗺️ Roadmap
+## Roadmap
 
 - [ ] GPU acceleration for large systems
 - [ ] Interactive web dashboard
@@ -279,4 +279,4 @@ MDToolkit integrates and builds upon these excellent projects:
 
 ---
 
-**Made with ❤️ for the MD community**
+**Made for the MD community**
