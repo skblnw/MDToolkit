@@ -1,0 +1,122 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mdtoolkit"
+version = "1.0.0"
+description = "Integrated molecular dynamics analysis framework"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "MDToolkit Contributors", email = "mdtoolkit@yourdomain.com"}
+]
+keywords = [
+    "molecular dynamics",
+    "MD analysis",
+    "computational chemistry",
+    "biophysics",
+    "protein dynamics",
+    "trajectory analysis"
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+    "Topic :: Scientific/Engineering :: Chemistry",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+    "numpy>=1.20.0",
+    "scipy>=1.7.0",
+    "matplotlib>=3.3.0",
+    "MDAnalysis>=2.0.0",
+    "scikit-learn>=1.0.0",
+    "pandas>=1.3.0",
+    "pyyaml>=5.4.0",
+    "tqdm>=4.62.0",
+    "seaborn>=0.11.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.0",
+    "pytest-cov>=2.0",
+    "black>=22.0",
+    "flake8>=3.9",
+    "jupyter>=1.0.0",
+    "ipywidgets>=7.6",
+    "sphinx>=4.0",
+    "sphinx-rtd-theme>=1.0",
+]
+msm = [
+    "pyemma>=2.5.0",
+]
+viz = [
+    "nglview>=3.0.0",
+    "plotly>=5.0.0",
+]
+all = [
+    "mdtoolkit[dev,msm,viz]",
+]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/MDToolkit"
+Documentation = "https://mdtoolkit.readthedocs.io"
+Repository = "https://github.com/yourusername/MDToolkit"
+Issues = "https://github.com/yourusername/MDToolkit/issues"
+
+[project.scripts]
+mdtk = "mdtoolkit.cli:main"
+mdtk-analyze = "scripts.quick_analysis:main"
+
+[tool.setuptools]
+packages = ["mdtoolkit"]
+
+[tool.black]
+line-length = 100
+target-version = ['py38', 'py39', 'py310', 'py311']
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+
+[tool.coverage.run]
+source = ["mdtoolkit"]
+omit = ["*/tests/*", "*/test_*.py"]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "if self.debug:",
+    "if __name__ == .__main__.:",
+    "raise NotImplementedError",
+    "pass",
+    "except ImportError:",
+]
